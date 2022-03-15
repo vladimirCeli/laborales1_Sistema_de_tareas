@@ -33,16 +33,18 @@
 <body>
   <!-- loader  -->
   <%- include(header) %>
+
+  <%- include(headerDos) %>
+
   <div class="container-fluid shadow p-3 mb-5 bg-body rounded">
-    <h1>Lista de Propuestas</h1>
-    <div class="container-fluid p-1 my-1">
+    <h1>Lista de Tareas</h1>
+    <div class="container p-1 my-1">
       <table class="table table-borderless shadow-lg p-3 mb-5 bg-body rounded">
         <thead>
           <tr class="">
             <th scope="col">#</th>
             <th scope="col">Titulo de tarea</th>
             <th scope="col">Descripción</th>
-            <th scope="col">Estado</th>
             <th scope="col">Asignatura</th>
             <th scope="col">Acción</th>
           </tr>
@@ -53,14 +55,36 @@
             <td><%=(i+1)%></td>
             <td><%= task.titulo %></td>
             <td><%= task.descripcion %></td>
-            <td><%= task.estadoTarea %></td>
             <td><%= task.asignatura %></td>
             <td>
 
               <!-- Button trigger modal -->
-              <a href="/listpropustareas/<%= task.id %>" class="btn btn-primary">
-                Ver propuestas
-              </a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Cargar Tarea
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog shadow-sm p-3 mb-5 bg-body rounded">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Entregar Tarea</h5>
+                      <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="bi bi-x"></i></button>
+                    </div>
+                    <div class="modal-body border d-flex align-items-center justify-content-center">
+                      <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02" />
+                        <label class="input-group-text btn btn-primary" for="inputGroupFile02">Subir</label>
+                      </div>
+                    </div>
+                    <div class="modal-footer border d-flex align-items-center justify-content-center">
+                      <button type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
             </td>
@@ -84,5 +108,5 @@
    <script src="/js/custom.js"></script>
    <script src="/https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
-
+<% include partials/_footer %>
 </html>

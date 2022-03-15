@@ -40,9 +40,11 @@ min-height: 100vh;">
 
    <%- include(header) %>
 
+   <%- include(headerDos) %>
+
    <div class="container-fluid p-3">
       <div class="container p-3 my-3">
-         <form class="d-flex" method="post" action="/busqdalista" novalidate>
+         <form class="d-flex" method="post" action="/principal_busqueda_tareas" novalidate>
             <input name="search" type="search" class="form-control rounded shadow-sm p-3 mb-5 bg-body rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-primary btn-lg shadow-sm p-3 mb-5 bg-body rounded"><i class="bi bi-search"></i>
             </button>
