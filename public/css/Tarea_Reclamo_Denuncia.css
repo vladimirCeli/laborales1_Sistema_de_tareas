@@ -1,0 +1,46 @@
+.cuerpo {
+    background-color: #F2F2F2;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /**interesante*/
+    position: relative;
+    padding-bottom: 12em;
+    min-height: 100vh;
+}
+
+label {
+    color: black;
+}
+
+#labelComentario{
+    color: black;
+}
+#border{
+    border-color: white;
+}
+#opciones {
+    align-items: center;
+    text-align: center;
+}
+
+.btnRevisar {
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    border-radius: 8%;
+}
+
+.labelComentario1{
+    color: black;
+    margin-top: 80%;
+}
+@media screen and (max-width: 767px) {
+    .label_Denunica {
+        margin-top: 5%;
+    }
+
+    .label_Denunica1 {
+        margin-top: 5%;
+    }
+}

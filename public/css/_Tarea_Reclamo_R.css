@@ -1,0 +1,233 @@
+/*DENUNCIA*/
+#divDenuncia1 {
+    margin-top: 2%;
+    border-color: white;
+}
+
+#divDenuncia2 {
+    border-color: black;
+}
+
+#divDenuncia3 {
+    padding: 5px;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+
+#divDenuncia4 {
+    padding: 2px;
+    text-align: right;
+    padding-top: 0%;
+    padding-right: 10%;
+}
+
+#btnAtrasDenuncia {
+    width: auto;
+    padding: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#divDenuncia5 {
+    margin-top: 0%;
+    border-color: white;
+}
+
+#divDenuncia6 {
+    border-color: black;
+    margin: 1% 5% 2% 5%;
+}
+
+#Denuncia {
+    width: 60%;
+}
+
+#nombredocente {
+    width: 50%;
+}
+
+.label_Denunica {
+    margin-top: 1%;
+}
+
+.label_Denunica1 {
+    margin-top: 1%;
+}
+
+/*RECLAMO*/
+.botonreclamo_Subir {
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    align-items: center;
+    border-radius: 8%;
+    margin-top: 120%;
+}
+
+.ancholabel {
+    width: 65%;
+}
+
+#divReclamo1 {
+    padding: 5px;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+
+#divReclamo2 {
+    padding: 5px;
+    text-align: center;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+
+#divReclamo3 {
+    padding: 2px;
+    text-align: center;
+    padding-top: 1%;
+    padding-right: 10%;
+}
+
+#divReclamo4 {
+    width: 100%;
+    height: 100%;
+    margin-top: 3%;
+    border-color: white;
+    height: auto;
+}
+
+#divReclamo5 {
+    border-color: black;
+}
+
+#divReclamo6 {
+    padding: 5px;
+    text-align: left;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+#divReclamo7 {
+    padding: 2px;
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 10%;
+}
+
+#divReclamo8 {
+    width: 100%;
+    height: 100%;
+    border-color: white;
+}
+
+#divReclamo9 {
+    border-color: black;
+    margin: 0 5% 4% 5%;
+}
+
+#btnAtrasReclamo {
+    width: auto;
+    padding: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#border {
+    border-color: black;
+}
+
+.btnRevisar {
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    border-radius: 8%;
+}
+
+#opciones {
+    align-items: center;
+    text-align: center;
+}
+
+
+#divReclamo2 a,
+#divReclamo3 a {
+    width: auto;
+    padding: 5px;
+    padding-top: 5px;
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    border-radius: 8%;
+}
+
+@media screen and (max-width: 1250px) {
+    .botonreclamo_Subir {
+        margin-top: 120%;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .botonreclamo_Subir {
+        margin-top: 160%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .botonreclamo_Subir {
+        margin-top: 160%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .botonreclamo_Subir {
+        margin-top: 240%;
+    }
+
+    .ancholabel {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #opciones {
+        margin-top: 15px;
+    }
+
+    .btnRevisar {
+        padding: 5px;
+    }
+
+    #btnAtrasReclamo {
+        width: 18%;
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    .botonreclamo_Subir {
+        margin-top: 5%;
+    }
+
+    .ancholabel {
+        width: 40%;
+    }
+
+    #tituloreclamo {
+        font-size: 15px;
+    }
+
+    #divReclamo2,
+    #divReclamo3 {
+        align-items: center;
+        position: relative;
+    }
+
+    #divReclamo2 a,
+    #divReclamo3 a {
+        width: auto;
+        padding: 2px;
+        padding-top: 5px;
+        background-color: #18A0FB;
+        border-color: #18A0FB;
+        border-radius: 8%;
+    }
+
+}

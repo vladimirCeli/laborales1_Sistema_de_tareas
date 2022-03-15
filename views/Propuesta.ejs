@@ -1,0 +1,92 @@
+<% include partials/_header %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Propuesta.css">
+    <link rel="stylesheet" href="/css/General/General.css">
+</head>
+
+<body style="     position: relative;
+padding-bottom: 0em;
+min-height: 100vh;">
+    <div id="cuerpo">
+        <div class="card card-body" id="divnuevo">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="#"><i class="fa-solid fa-list"></i>Propuestas</a>
+                </div>
+                <div class="col-md-10 nuevo">
+                    <span class="nuevo">
+                        Cristobal Rios <i style="margin-left: 2%;" class="fa-solid fa-person"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class=" container card card-body" id="divPropuesta1">
+                <div class=" container card card-body" id="divPropuesta2">
+                    <div class="row">
+                        <div class="card-body col-md-15" id="divPropuesta3">
+                            <h4>Elaboracion de propuesta</h4>
+                        </div>
+                        <div class="card-body col-md-5" id="divPropuesta4">
+                            <a href="/user/Propuesta" class="btn btn-danger" id="btnAtrasPropuesta">Atras</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" container card card-body" id="divPropuesta5">
+                <div class="card card-body" id="divPropuesta6">
+                    <form action="/user/crear_Propuesta" method="POST">
+                        <div class="card-body row mx-auto">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="valor" id="label_Propuesta"> Valor</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descripcion" id="label_Propuesta1"> Descripcion</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" id="subir">
+                                    <input type="text" name="valor" placeholder="Valor de la propuesta*"
+                                        class="form-control" id="valor">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form-control"
+                                        placeholder="Detalles*"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" id="btnEnviarPropuesta">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class=" container card card-body" id="divPropuesta1">
+                    <div class=" container card card-body" id="divPropuesta2">
+                        <div class="row">
+                            <div class="card-body col-md-15" id="divPropuesta3">
+                                <h4>Opciones</h4>
+                            </div>
+                            <div class="card-body col-md-5" id="divPropuesta4">
+                                <a href="/user/Propuesta" class="btn btn-primary" id="btnCancelarPropuesta">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+<% include partials/_footer %>

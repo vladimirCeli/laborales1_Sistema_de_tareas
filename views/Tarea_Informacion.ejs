@@ -1,0 +1,131 @@
+<% include partials/_header %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/_Tarea_Informacion.css">
+    <link rel="stylesheet" href="/css/General/General.css">
+</head>
+
+<body style="     position: relative;
+padding-bottom: 0em;
+min-height: 100vh;">
+    <div id="cuerpo">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-user-astronaut" alt="" width="50" height="30"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">VER PROPUESTAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/listado_Tarea">VER TAREAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">INFORMACION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container card-body">
+            <div class=" container card card-body" id="divTareaInfo1">
+                <div class="row">
+                    <div class="card-body col-md-15" id="divTareaInfo2">
+                        <h4>Descripción de tarea</h4>
+                    </div>
+                    <div class="card-body col-md-5" id="divTareaInfo3">
+                        <a href="/user/listado_Tarea" class="btn btn-danger" id="btnAtrasTareaInfo">Atras</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" container card card-body" id="divTareaInfo4">
+                <% if (tareas) { %>
+                <div class="card card-body" id="divTareaInfo5">
+                    <div class="card-body row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <li class="etiqueta">Titulo</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.titulo %></li>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <li class="etiqueta">Asignatura</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.asignatura %></li>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <li class="etiqueta">Descripcion</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.descripcion %></li>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <li class="etiqueta">Estado</li>
+                                <div class="card card-body cuerpoLista">
+                                    <% if (tareas.estado==1) { %>
+                                    <li class="lista">Realizada</li>
+                                    <% } else {%>
+                                    <li class="lista">Pendiente</li>
+                                    <% }%>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <li class="etiqueta">Archivo</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.archivo %></li>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <li class="etiqueta">Observaciones</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.observaciones %></li>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <li class="etiqueta">Estimacion</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.valorMaximo %></li>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <li class="etiqueta">Fecha limite</li>
+                                <div class="card card-body cuerpoLista">
+                                    <li class="lista"><%= tareas.fechalimite %></li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-body" id="divTareaInfo6">
+                        <% if (tareas.estado!=1) { %>
+                        <a href="/user/informacionOpciones_Tarea/<%= tareas.id %>" class="btn btn-primary btnRevisar"> Revisar</a>
+                        <% } else {%>
+                        <a href="/user/informacionOpciones_Tarea/<%= tareas.id %>" class="btn btn-primary btnRevisar"
+                            hidden> Revisar</a>
+                        <% }%>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+<% include partials/_footer %>

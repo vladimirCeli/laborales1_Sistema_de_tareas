@@ -1,0 +1,127 @@
+<% include partials/_header %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/_Tarea.css">
+    <link rel="stylesheet" href="/css/General/General.css">
+</head>
+
+<body style="     position: relative;
+padding-bottom: 0em;
+min-height: 100vh;">
+    <div id="cuerpo">
+        <div class="card card-body" id="divnuevo">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="/user/listado_Tarea"><i class="fa-solid fa-list"></i>Tareas</a>
+                </div>
+                <div class="col-md-10 nuevo">
+                    <span class="nuevo">
+                        Cristobal Rios <i style="margin-left: 2%;" class="fa-solid fa-person"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container card-body">
+            <div class=" container card card-body" id="divEditarTarea1">
+                <div class="row">
+                    <div class="card-body col-md-15" id="divEditarTarea2">
+                        <h4>Crea una tarea</h4>
+                    </div>
+                    <div class="card-body col-md-5" id="divEditarTarea3">
+                        <a href="/user/listado_Tarea/" class="btn btn-danger" id="btnCancelarEditarT">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" container card card-body" id="divEditarTarea4">
+                <div class="card card-body" id="divEditarTarea5">
+                    <div class="card-body row ">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="titulo" id="l1" style="margin-top: 5%;"> Titulo de tarea </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion" id="l2" style="margin-top: 5%;"> Descripcion </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="asignatura" id="l3" style="margin-top: 5%;"> Asignatura </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="fechalimite" id="l4" style="margin-top: 5%;"> Fecha Limite </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="observaciones" id="l6" style="margin-top: 5%;"> Observaciones </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="archivo" id="l5" style="margin-top: 5%;"> Archivo</label>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="valorMaximo" id="l7" style="margin-top: 5%;"> Estimacion </label>
+                            </div>
+    
+                        </div>
+                        <div class="col-md-7">
+                            <form action="/user/crear_Tarea" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="titulo" id="titulo" placeholder="Titulo*" class="form-control"
+                                        autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion*"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="asignatura" id="asignatura" placeholder="Asignatura*"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="fechalimite" id="fechalimite"
+                                        placeholder="0000-00-00 / Año-Mes-Dia*" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="observaciones" id="observaciones" placeholder="Observaciones*"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input onclick="info()" type="url" name="archivo" id="archivo"
+                                        placeholder="Ingresar formato: https://*" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="valorMaximo" id="valorMaximo" placeholder="Estimacion: 00,00*"
+                                        class="form-control">
+                                </div>
+                                <button onclick=" return enviar()" type="submit" class="btn btn-primary" id="btnActualizar">
+                                    Guardar
+                                </button>
+                            </form>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- INCORPORACIONES PARA LAS ALERTAS Y LOS ESTILOS DE TABLAS-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+        <script>
+    
+            function info() {
+                Swal.fire({
+                    title: 'Atencion!',
+                    text: "Subir la tarea a drive y colocar el respectivo enlace",
+                    icon: 'info',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'Lo entiendo!'
+                });
+            };
+        </script>
+        <script src="/js/validarCampo_CT.js"></script>
+    </div>
+    
+</body>
+
+<% include partials/_footer %>

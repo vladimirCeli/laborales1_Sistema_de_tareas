@@ -1,0 +1,113 @@
+#cuerpo {
+    background-color: #F2F2F2;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /**interesante*/
+    position: relative;
+    padding-bottom: 8em;
+    min-height: 100vh;
+}
+h4{
+    padding-left: 4%;
+}
+div label {
+    color: black;
+    margin-left: 30%;
+}
+div input {
+    margin-left: 15%;
+}
+
+#divEditarTarea1 {
+    margin-top: 2%;
+    border-color: white;
+}
+
+#divEditarTarea2 {
+    padding: 5px;
+    text-align: left;
+    padding-top: 2.5%;
+    padding-left: 5%;
+}
+
+#divEditarTarea3 {
+    padding: 2px;
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 10%;
+}
+
+#divEditarTarea4 {
+    margin-top: 0%;
+    border-color: white;
+}
+
+#divEditarTarea5 {
+    border-color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#btnSubirArchivoT {
+    border-radius: 8%;
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    padding: 5px;
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+#titulo,
+#descripcion,
+#asignatura,
+#fechalimite,
+#observaciones,
+#archivo,
+#valorMaximo {
+    width: 65%;
+}
+
+#btnActualizar {
+    border-radius: 8%;
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    margin-left: 25%;
+}
+
+#btnCancelarEditarT {
+    width: 25%;
+    padding: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    h4 {
+        font-size: 15px;
+        padding-left: 4%;
+    }
+
+    #btnCancelarEditarT {
+        width: 12%;
+        padding: 5px;
+        font-size: 7px;
+    }
+    #l1,#l2,#l3,#l4,#l5,#l6,#l7{
+        font-size: 10px;
+    }
+    #btnActualizar{
+        font-size: 10px;
+        padding: 5px;
+        align-items: center;
+    }
+
+    div label {
+        margin-left: 1%;
+    }
+    div input {
+        margin-left: 2%;
+    }
+}

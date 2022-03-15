@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>App Tareas</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body style="     position: relative;
+padding-bottom: 0em;
+min-height: 100vh;">
+   <!-- loader  -->
+
+   <%- include(header) %>
+
+   <div class="container-fluid p-3">
+      <div class="container p-3 my-3">
+         <form class="d-flex" method="post" action="/busqdalista" novalidate>
+            <input name="search" type="search" class="form-control rounded shadow-sm p-3 mb-5 bg-body rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+            <button type="submit" class="btn btn-primary btn-lg shadow-sm p-3 mb-5 bg-body rounded"><i class="bi bi-search"></i>
+            </button>
+         </form>
+      </div>
+       <div class="container-fluid p-1">
+         <% results.forEach((teacher)=> { %>
+       <div class="container-fluid p-2">
+         
+         <div class="card shadow p-2 mb-2 bg-body rounded">
+            <div class="card-body d-grid gap-4">
+              <h5 class="card-title p-2">Titulo: <%= teacher.titulo %></h5>
+              <p class="card-text p-2">Asignatura: <%= teacher.asignatura %></p>
+              <p class="card-text p-2">Descripción: <%= teacher.descripcion %></p>
+              <div class="d-grid gap-1 col-6 mx-auto">
+                 <button type="submit" class="btn btn-primary shadow-lg">Envía una propuesta</button>
+              </div>
+            </div>
+          </div>
+          
+       </div>
+       <% }) %>
+      </div>
+   </div>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+<% include partials/_footer %>
+</html>

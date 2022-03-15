@@ -1,0 +1,94 @@
+<% include partials/_header %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Tarea_Reclamo_Denuncia.css">
+    <link rel="stylesheet" href="/css/_Tarea_Reclamo_R.css">
+    <link rel="stylesheet" href="/css/General/General.css">
+</head>
+
+<body style="     position: relative;
+padding-bottom: 0em;
+min-height: 100vh;" >
+    <div class="cuerpo">
+        <div class="card card-body" id="divnuevo">
+            <div class="row">
+                <div class="col-md-11 nuevo">
+                    <span class="nuevo">
+                        Carlos Villacis
+                    </span>
+                </div>
+                <div class="col-md-1 nuevo">
+                    <span class="nuevo">
+                        <i class="fa-solid fa-person"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container card-body">
+            <div class=" container card card-body" id="divReclamo4">
+                <div class="container card card-body" id="divReclamo5">
+                    <div class="row">
+                        <div class="card-body col-md-15" id="divReclamo6">
+                            <h4 id="tituloreclamo">Crear Presupuesto</h4>
+                        </div>
+                        <div class="card-body col-md-5" id="divReclamo7">
+                            <a href="/user/listado_Tarea" class="btn btn-danger" id="btnAtrasReclamo">Atras</a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" container card card-body" id="divReclamo8">
+                    <form action="/user/crear_Presupuesto_Post" method="POST">
+                        <% if (presupuesto) { %>
+                        <input hidden id="tareas" name="tareas" value="<%= presupuesto.id %>">
+                        <% } %>
+                        <div class="card card-body" id="divReclamo9">
+                            <div class="card-body row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="valor"> Valor de presupuesto </label>
+                                        <input type="number" min="1" pattern="^[0-9]+" name="valor" id="valor" placeholder="Valor numerico: 1,2..*"
+                                            class="form-control ancholabel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comision"> Comision extra </label>
+                                        <input type="number" min="1" pattern="^[0-9]+" name="comision" id="comision" placeholder="Valor numerico: 1,2..*"
+                                            class="form-control ancholabel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="detalle"> Detalles </label>
+                                        <textarea name="detalle" id="detalle" class="form-control"
+                                            style="column-gap: 15; row-gap: 5;"
+                                            placeholder="Detalles Extra...*"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-body" id="border">
+                            <div class="row">
+                                <div class="col-md-6" id="opciones">
+                                    <button type="submit" class="btn btn-primary btnRevisar">
+                                        Guardar
+                                    </button>
+                                </div>
+                                <% if (presupuesto) { %>
+                                <div class="col-md-6" id="opciones">
+                                    <a href="/user/informacionOpciones_Tarea/<%= presupuesto.id %>" class="btn btn-primary btnRevisar"> Cancelar</a>
+                                </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+</body>
+
+<% include partials/_footer %>

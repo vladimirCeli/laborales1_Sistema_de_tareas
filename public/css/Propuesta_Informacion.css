@@ -1,0 +1,110 @@
+.etiqueta {
+    list-style-type: none;
+    margin-top: 9%;
+    padding: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: black;
+}
+
+.lista {
+    list-style-type: none;
+    padding: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.cuerpoLista {
+    border-color: black;
+    padding: 2%;
+    margin-top: 4%;
+}
+
+.listaExtra {
+    list-style-type: none;
+    color: black;
+}
+
+.cuerpolistaExtra {
+    list-style-type: none;
+}
+
+.cuerpoLista1 {
+    border-color: black;
+    padding: 2%;
+    margin-top: 4%;
+    align-items: center;
+    padding-left: 25%;
+}
+
+.btnRevisar {
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    border-radius: 8%;
+}
+
+/*NUEVAS*/
+#btnAtrasDes {
+    width: 25%;
+}
+
+#divPropuestaDes1 {
+    border-color: white;
+}
+
+#border {
+    border-color: white;
+}
+
+#divPropuestaDes2 {
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 1.5%;
+}
+
+#divPropuestaDes3 {
+    text-align: right;
+    margin-right: 8%;
+}
+
+#divPropuestaDes4 {
+    border-color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#opciones {
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    #opciones {
+        margin-top: 15px;
+    }
+
+    .btnRevisar {
+        padding: 5px;
+    }
+
+    .etiqueta,
+    .lista {
+        font-size: 11px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    #btnAtrasDes {
+        width: 18%;
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    #border,
+    #divPropuestaDes3 {
+        padding-top: 1px;
+    }
+
+}

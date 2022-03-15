@@ -1,0 +1,108 @@
+<% include partials/_header %>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/_Tarea_Informacion.css">
+    <link rel="stylesheet" href="/css/General/General.css">
+</head>
+
+<body style="     position: relative;
+padding-bottom: 0em;
+min-height: 100vh;">
+    <div id="cuerpo">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-user-astronaut" alt="" width="50" height="30"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/listado_Tarea">VER TAREAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">INFORMACION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container card-body">
+            <% if (tareas) { %>
+            <div class=" container card card-body" id="divprimero">
+                <div class=" container card card-body" id="divborde">
+                    <div class="row">
+                        <div class="card-body col-md-15" id="divTitulo">
+                            <h4>Información de tarea</h4>
+                        </div>
+                        <div class="card-body col-md-5" id="divBotonTitulo">
+                            <a href="/user/listado_Tarea" class="btn btn-danger" id="botontitulo">Atras</a>
+
+                        </div>
+                    </div>
+                    <div class="card card-body" id="divCuerpo2">
+                        <div class="card-body row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="Observaciones"> Observaciones </label>
+                                    <div class="card card-body" id="spam">
+                                        <span id="textspam"><%= tareas.observaciones %></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Archivo"> Archivo</label>
+                                    <div class="card card-body" id="spam">
+                                        <span id="textspam"><%= tareas.archivo %></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fechalimite"> Fecha Limite </label>
+                                    <div class="card card-body" id="spam">
+                                        <span id="textspam"><%= tareas.fechalimite %></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" container card card-body" id="divCuerpo1">
+
+                        <div class=" container card card-body" id="divCuerpo3">
+                            <div class=" container card card-body" id="divborde">
+                                <div class="row">
+                                    <div class="card-body col-md-12" id="divTitulo2">
+                                        <h4>Opciones</h4>
+                                    </div>
+                                    <div class="card-body col-md-4" id="cuerpoReclamo">
+                                        <a href="/user/crear_Reclamo/<%= tareas.id %>" class="btn btn-primary"
+                                            id="botonReclamo">Reclamo</a>
+                                    </div>
+                                    <div class="card-body col-md-4" id="cuerpoDenuncia">
+                                        <a href="/user/crear_Presupuesto/<%= tareas.id %>" class="btn btn-primary"
+                                            id="botonDenuncia">Presupuesto</a>
+                                    </div>
+                                    <div class="card-body col-md-4" id="cuerpoCalificar">
+                                        <a href="/user/informacion_Tarea/<%= tareas.id %>" class="btn btn-primary"
+                                            id="botonCalificar">Calificar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <% } %>
+        </div>
+
+    </div>
+
+</body>
+
+<% include partials/_footer %>

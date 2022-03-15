@@ -1,0 +1,135 @@
+.cuerpo {
+    background-color: #F2F2F2;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /**interesante*/
+    position: relative;
+    padding-bottom: 12em;
+    min-height: 100vh;
+}
+
+#divComentario1 {
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    border-color: white;
+}
+
+#divComentario2 {
+    padding: 5px;
+    text-align: left;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+#divComentario3 {
+    padding: 2px;
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 10%;
+}
+
+#divComentario4 {
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    border-color: white;
+}
+
+#divComentario5 {
+    border-color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#divComentario6 {
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+    border-color: white;
+}
+
+#divComentario7 {
+    padding: 5px;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+
+label {
+    color: black;
+}
+
+#calificacion {
+    width: 75%;
+}
+
+#btnAtrasComentario {
+    width: auto;
+    padding: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#labelComentario {
+    color: black;
+}
+
+#border_Div {
+    border-color: black;
+}
+
+#border {
+    border-color: white;
+}
+
+#opciones {
+    align-items: center;
+    text-align: center;
+}
+
+.btnRevisar {
+    background-color: #18A0FB;
+    border-color: #18A0FB;
+    border-radius: 8%;
+}
+
+.labelComentario1 {
+    color: black;
+    margin-top: 80%;
+}
+
+@media screen and (max-width: 767px) {
+    h4 {
+        font-size: 15px;
+    }
+
+    #opciones {
+        margin-top: 15px;
+    }
+
+    .btnRevisar {
+        padding: 5px;
+    }
+
+    #btnAtrasComentario {
+        width: 18%;
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    .label_Denunica {
+        margin-top: 5%;
+    }
+
+    .label_Denunica1 {
+        margin-top: 5%;
+    }
+
+    .labelComentario,
+    .labelComentario1 {
+        font-size: 10px;
+    }
+}
