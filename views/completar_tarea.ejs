@@ -59,12 +59,12 @@
             <td>
 
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<%= task.id %>">
                 Cargar Tarea
               </button>
 
               <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+              <div class="modal fade" id="staticBackdrop-<%= task.id %>" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog shadow-sm p-3 mb-5 bg-body rounded">
                   <div class="modal-content">
@@ -75,18 +75,18 @@
                     </div>
                     <div class="modal-body border d-flex align-items-center justify-content-center">
                       <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02" />
-                        <label class="input-group-text btn btn-primary" for="inputGroupFile02">Subir</label>
+                        <form class="d-flex" method="post" action="/completar_tarea/<%= results.docenteId %>" novalidate>
+                          <input name="search" type="input" class="form-control rounded shadow-sm p-3 mb-5 bg-body rounded" placeholder="Subir link" aria-label="Search" aria-describedby="search-addon" />
+                          </button>
                       </div>
                     </div>
                     <div class="modal-footer border d-flex align-items-center justify-content-center">
-                      <button type="button" class="btn btn-primary">Aceptar</button>
+                      <button type="submit" class="btn btn-primary">Aceptar</button>
                     </div>
+                  </form>
                   </div>
                 </div>
               </div>
-
-
             </td>
           </tr>
           <% }) %>
@@ -108,5 +108,5 @@
    <script src="/js/custom.js"></script>
    <script src="/https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
-<% include partials/_footer %>
+|<% include partials/_footer %>
 </html>

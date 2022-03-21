@@ -91,6 +91,12 @@
                           </div>
                           <div col-md-3 ms-auto>
                             <p class="fs-4"> <b>Comentarios</b> </p>
+                            <% r.forEach((comments)=> { %>
+                            <% if (proposal.docente == comments.docentes1) { %>
+                              <p class="fs-4"> <b>Calificación:</b> <%= comments.calificacion %> <b>/5</b> </p>
+                              <p class="fs-4"> <b>Comentario:</b> <%= comments.comentario %></p>
+                              <% } %>
+                              <% }) %>
                           </div>
                         </div>
                         <% } %>

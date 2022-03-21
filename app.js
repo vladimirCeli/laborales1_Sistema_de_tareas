@@ -1,15 +1,11 @@
-var createError = require('http-errors');
-var express = require('express');
-var mongoose = require("mongoose");
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var session = require('express-session');
-var flash = require('express-flash-notification');
-var app = express();
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
+const flash = require('express-flash-notification');
+const app = express();
 
 
 // view engine setup
